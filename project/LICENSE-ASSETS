@@ -1,0 +1,157 @@
+# Asset License Information
+
+This file clarifies the licensing for different types of assets in this project.
+
+## Code License
+
+All Python code, configuration files, and documentation in this project are licensed under the **MIT License** (see main LICENSE file).
+
+## Asset Licenses
+
+### LUT Files (Color Grading)
+- **Files**: `luts/*.cube`
+- **License**: CC0 1.0 Universal (Public Domain)
+- **Usage**: Free for any purpose, commercial or non-commercial
+- **Attribution**: Not required but appreciated
+
+### Auto-Generated Assets
+- **Files**: Gradient backgrounds, procedural effects, generated overlays
+- **License**: CC0 1.0 Universal (Public Domain)
+- **Usage**: Free for any purpose, commercial or non-commercial
+- **Attribution**: Not required
+
+### Community Contributed Assets
+- **Files**: Assets in `assets/bg/` and `assets/overlays/` directories
+- **License**: CC0 1.0 Universal (Public Domain) - **REQUIRED**
+- **Contribution Requirement**: All community assets MUST be CC0 licensed
+- **Verification**: Contributors must verify they have rights to release under CC0
+
+## License Headers
+
+### Python Files
+```python
+#!/usr/bin/env python3
+"""
+MIT License - See LICENSE file for details
+Copyright (c) 2024 TikTok Video Automation Bot Contributors
+"""
+```
+
+### LUT Files
+```
+# CC0 1.0 Universal (Public Domain)
+# Free for any use, commercial or non-commercial
+# No attribution required
+```
+
+### Asset Files
+Community assets should include a comment or metadata indicating CC0 license where possible.
+
+## Contribution Guidelines
+
+### For Code Contributors
+- All code contributions are automatically licensed under MIT
+- By contributing, you agree to license your code under MIT
+- Include appropriate copyright headers in new files
+
+### For Asset Contributors
+- **MANDATORY**: All assets must be CC0 (public domain) or your original work
+- **VERIFICATION**: You must have full rights to release the asset under CC0
+- **NO COPYRIGHTED MATERIAL**: Stock photos, movie clips, music, etc. are prohibited
+- **DOCUMENTATION**: Include source and license information in your PR
+
+### Acceptable Asset Sources
+✅ **Original Work**: Created by you with full rights
+✅ **CC0 Sources**: Unsplash, Pixabay, Pexels (verify CC0 license)
+✅ **Public Domain**: Government works, expired copyrights
+✅ **Generated Content**: AI-generated content you have rights to
+
+### Prohibited Asset Sources
+❌ **Stock Photos**: Getty Images, Shutterstock, Adobe Stock (unless you own license)
+❌ **Copyrighted Media**: Movie clips, TV shows, commercial music
+❌ **Social Media**: TikTok videos, Instagram posts, YouTube content
+❌ **Game Assets**: Screenshots, models, textures from commercial games
+❌ **Brand Assets**: Logos, trademarks, branded content
+
+## Verification Process
+
+### Before Contributing Assets
+1. **Verify Ownership**: Ensure you have full rights to the asset
+2. **Check License**: Confirm the asset is CC0 or you can release it as CC0
+3. **Document Source**: Note where the asset came from and its original license
+4. **Test Quality**: Ensure the asset meets technical requirements
+
+### Asset Review Process
+1. **License Check**: Maintainers verify CC0 compliance
+2. **Quality Review**: Technical and content quality assessment
+3. **Legal Review**: Copyright and trademark clearance
+4. **Integration Test**: Verify asset works with the system
+
+## Legal Protection
+
+### For Users
+- **MIT Code**: Use, modify, distribute freely with attribution
+- **CC0 Assets**: Use for any purpose without restriction
+- **No Warranty**: Assets provided "as-is" without warranty
+
+### For Contributors
+- **Code**: Retain copyright, license under MIT
+- **Assets**: Release all rights under CC0 (cannot be revoked)
+- **Liability**: No liability for asset use by others
+
+## Compliance Monitoring
+
+### Automated Checks
+- License header verification in CI/CD
+- Asset metadata validation
+- Copyright notice consistency
+
+### Manual Review
+- New asset contributions reviewed for compliance
+- Periodic audit of existing assets
+- Community reporting of license issues
+
+## Reporting License Issues
+
+### If You Find a License Violation
+1. **Document the Issue**: Screenshot, file path, evidence
+2. **Contact Maintainers**: Open a GitHub issue or email
+3. **Provide Details**: Original source, copyright holder, license terms
+4. **Suggest Resolution**: Removal, replacement, or proper licensing
+
+### Response Process
+1. **Immediate Action**: Problematic assets removed within 24 hours
+2. **Investigation**: Verify the claim and gather facts
+3. **Resolution**: Remove, replace, or obtain proper licensing
+4. **Prevention**: Update guidelines to prevent similar issues
+
+## International Considerations
+
+### Copyright Laws
+- **US**: Fair use may apply to transformative content
+- **EU**: Copyright Directive and national implementations
+- **Other**: Research local copyright laws in your jurisdiction
+
+### Safe Harbor
+- **DMCA**: US safe harbor provisions may apply
+- **EU**: E-commerce Directive safe harbor provisions
+- **Compliance**: Respond promptly to takedown requests
+
+## Contact Information
+
+### License Questions
+- **Email**: legal@bottiktok.com
+- **GitHub**: Open an issue with "License" label
+- **Response Time**: 48 hours for license inquiries
+
+### Asset Contributions
+- **Process**: Submit PR with asset and license documentation
+- **Review Time**: 5-7 business days for asset review
+- **Requirements**: See CONTRIBUTING.md for detailed guidelines
+
+---
+
+**Summary**: Code is MIT licensed, assets must be CC0. When in doubt, ask before contributing.
+
+**Last Updated**: December 2024
+**Version**: 1.0

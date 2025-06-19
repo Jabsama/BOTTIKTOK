@@ -38,6 +38,9 @@ This TikTok Video Automation Bot is provided for **educational and legitimate bu
 - **GDPR Compliance**: EU users must ensure GDPR compliance for any personal data processing
 - **Privacy Laws**: Comply with applicable privacy laws in your jurisdiction
 - **Data Minimization**: The bot processes minimal personal data
+- **Data Retention**: Analytics data is retained for 90 days maximum, then automatically purged
+- **No Personal Data**: The system does not collect or store personal data from video viewers
+- **Local Storage**: All data is stored locally on your infrastructure, not transmitted to third parties
 
 ## 🔒 Technical Safeguards
 
