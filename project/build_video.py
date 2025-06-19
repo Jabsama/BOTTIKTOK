@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-TikTok Video Builder
-Creates polished vertical videos with MoviePy + FFmpeg
-Includes LUT color grading, glow effects, smooth transitions, and emoji particles
+ULTRA-VIRAL AI ENGINE - TikTok Automation Superbot
+Complete automation: trend analysis → AI content creation → viral video production → compliant upload
+100% TikTok Terms of Service compliant with advanced viral mechanics
+The only file you need for viral TikTok domination!
 """
 
 import os
