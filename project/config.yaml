@@ -10,11 +10,12 @@ assets:
   overlay_dir: "./assets/overlays"
 
 video:
-  fps_target: 30
   width: 1080
   height: 1920
+  fps_target: 30
   duration_min: 8
   duration_max: 10
+  lut_path: "luts/teal_orange.cube"  # Configurable LUT for color grading
   
 posting:
   max_posts_per_day: 6
