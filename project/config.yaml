@@ -18,8 +18,8 @@ video:
   lut_path: "luts/teal_orange.cube"  # Configurable LUT for color grading
   
 posting:
-  max_posts_per_day: 6
-  min_spacing_minutes: 90
+  max_posts_per_day: 2  # TikTok-compliant conservative limit
+  min_spacing_minutes: 120  # 2 hours minimum spacing for compliance
   
 features:
   emoji_particles: true
