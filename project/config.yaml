@@ -1,0 +1,61 @@
+# TikTok Video Automation Configuration
+brand:
+  hex_primary: "#00BFA6"      # turquoise (contour & accents)
+  hex_secondary: "#FFD54F"    # jaune miel (flash CTA)
+  logo_png: ""                # no logo yet
+  promo_code: "SHA-256-76360B81D39F"
+
+assets:
+  bg_dir: "./assets/bg"
+  overlay_dir: "./assets/overlays"
+
+video:
+  fps_target: 30
+  width: 1080
+  height: 1920
+  duration_min: 8
+  duration_max: 10
+  
+posting:
+  max_posts_per_day: 6
+  min_spacing_minutes: 90
+  
+features:
+  emoji_particles: true
+  tts_local: false
+  auto_captions: false
+
+# Viral Remix Configuration
+remix:
+  mode_preference: "mixed"    # duet_only | download_if_allowed | mixed
+  max_remix_per_day: 2
+  min_transform_percentage: 30
+  max_original_duration: 3    # seconds to keep from original
+  fetch_interval_hours: 2
+  top_videos_count: 100
+
+# TikTok API Configuration (fill these in .env)
+tiktok:
+  client_key: ""
+  client_secret: ""
+  access_token: ""
+  
+# Content themes for GPU rental promotion
+themes:
+  - "CHEAP GPU"
+  - "FAST RENDER" 
+  - "AI POWER"
+  - "CRYPTO MINE"
+  - "GAME DEV"
+  - "ML TRAIN"
+
+# Affiliate links
+affiliate:
+  main_url: "https://voltagegpu.com/?ref=SHA-256-76360B81D39F"
+  display_url: "voltageGPU.com"
+
+# Compliance
+disclaimers:
+  ai_generated: "AI generated"
+  results_vary: "⚠ Results may vary"
+  no_guarantee: "No income guarantee"
