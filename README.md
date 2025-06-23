@@ -3,9 +3,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![TikTok API](https://img.shields.io/badge/TikTok-API%20Compliant-red.svg)](https://developers.tiktok.com/)
-[![Production Ready](https://img.shields.io/badge/Production-Ready-green.svg)](https://github.com/Jabsama/BOTTIKTOK)
+[![Production Ready](https://img.shields.io/badge/Production-Ready-green.svg)](https://github.com/yourusername/viral-ai-tiktok)
 
 **The most advanced TikTok automation system that creates viral content while staying 100% compliant with TikTok's Terms of Service.**
+
+---
 
 ## 🎯 What This Bot Does
 
@@ -16,34 +18,101 @@
 - **📊 Learns & Optimizes** - Continuous improvement based on performance data
 - **🔒 100% Compliant** - Official APIs only, automatic AIGC labeling, branded content disclosure
 
+---
+
 ## ⚡ Quick Start (3 Steps)
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/Jabsama/BOTTIKTOK.git
-cd BOTTIKTOK
+git clone https://github.com/yourusername/viral-ai-tiktok.git
+cd viral-ai-tiktok
 pip install -r requirements.txt
 ```
 
-### 2. Configure Your Bot
+### 2. Get Your API Keys
+
+#### 🎵 **TikTok Business API** (Required)
+1. Go to [TikTok Business Center](https://business.tiktok.com/)
+2. Create a business account
+3. Visit [TikTok Developer Portal](https://developers.tiktok.com/)
+4. Create a new app and enable "Content Posting API"
+5. Get your credentials:
+   - `Client Key`
+   - `Client Secret`
+
+#### 📺 **YouTube API** (Optional)
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project
+3. Enable YouTube Data API v3
+4. Create credentials (OAuth 2.0)
+5. Get your credentials:
+   - `Client ID`
+   - `Client Secret`
+   - `API Key`
+
+### 3. Configure & Launch
 ```bash
 # Copy the example configuration
 cp .env.example .env
 
-# Edit .env with your TikTok credentials
-# Get them from: https://business.tiktok.com/
-```
-
-### 3. Launch Your Viral Empire
-```bash
-# Option 1: All-in-one file (easiest)
-python project/ULTIMATE_VIRAL_AI.py
-
-# Option 2: Modular architecture (production)
+# Edit .env with your API credentials
+# Then launch your viral empire!
 python run_bot.py
 ```
 
 **That's it! Your bot will start creating viral content automatically! 🔥**
+
+---
+
+## 🔧 Configuration Guide
+
+### Step-by-Step .env Setup
+
+1. **Copy the template:**
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Fill in your TikTok credentials:**
+   ```env
+   # 🎵 TIKTOK API CREDENTIALS (REQUIRED)
+   TIKTOK_CLIENT_KEY=your_client_key_here
+   TIKTOK_CLIENT_SECRET=your_client_secret_here
+   ```
+
+3. **Get access tokens (choose one method):**
+
+   **Method A: Automatic Token Generator**
+   ```bash
+   python generate_tokens.py
+   # Follow the browser prompts to authorize
+   # Tokens will be automatically added to .env
+   ```
+
+   **Method B: Manual OAuth Flow**
+   - Visit TikTok's OAuth URL with your credentials
+   - Get authorization code from callback
+   - Exchange for access/refresh tokens
+   - Add to .env manually
+
+4. **Optional: Add YouTube credentials:**
+   ```env
+   # 📺 YOUTUBE API CREDENTIALS (OPTIONAL)
+   YOUTUBE_CLIENT_ID=your_youtube_client_id
+   YOUTUBE_CLIENT_SECRET=your_youtube_client_secret
+   YOUTUBE_API_KEY=your_youtube_api_key
+   ```
+
+5. **Customize your brand:**
+   ```env
+   # 🎨 BRAND CUSTOMIZATION
+   BRAND_PRIMARY_COLOR=#00BFA6
+   BRAND_SECONDARY_COLOR=#FFD54F
+   PROMO_CODE=YOUR_CODE
+   AFFILIATE_URL=https://your-site.com/?ref=YOUR_CODE
+   ```
+
+---
 
 ## 🎬 What Your Bot Creates
 
@@ -58,63 +127,45 @@ python run_bot.py
 - **🔄 Perfect Loops** - Seamless looping for maximum watch time
 - **📱 Multi-Platform Optimization** - Optimized for each platform's algorithm
 
-## 🔧 Configuration
-
-### **Required: TikTok API Setup**
-
-1. **Create TikTok Business Account**
-   - Go to [TikTok Business Center](https://business.tiktok.com/)
-   - Create a business account
-
-2. **Get Developer Access**
-   - Visit [TikTok Developer Portal](https://developers.tiktok.com/)
-   - Create a new app
-   - Enable "Content Posting API" product
-
-3. **Add Credentials to .env**
-   ```env
-   TIKTOK_CLIENT_KEY=your_client_key_here
-   TIKTOK_CLIENT_SECRET=your_client_secret_here
-   TIKTOK_ACCESS_TOKEN=your_access_token_here
-   TIKTOK_REFRESH_TOKEN=your_refresh_token_here
-   ```
-
-### **Optional: Multi-Platform Setup**
-
-**YouTube Shorts:**
-```env
-YOUTUBE_CLIENT_ID=your_youtube_client_id
-YOUTUBE_CLIENT_SECRET=your_youtube_client_secret
-YOUTUBE_REFRESH_TOKEN=your_youtube_refresh_token
-```
-
-**Instagram Reels:**
-```env
-INSTAGRAM_ACCESS_TOKEN=your_instagram_access_token
-INSTAGRAM_BUSINESS_ACCOUNT_ID=your_instagram_business_id
-```
+---
 
 ## 🏗️ Architecture
 
 ### **Two Deployment Options**
 
-#### **1. All-in-One File (Easiest)**
+#### **1. Simple Launcher (Recommended for beginners)**
+```bash
+python run_bot.py
 ```
-project/ULTIMATE_VIRAL_AI.py  # Complete system in one file
-```
-Perfect for beginners - just run and go viral!
+Uses the modular architecture with automatic error handling.
 
-#### **2. Modular Architecture (Production)**
+#### **2. Advanced Usage**
+```python
+from viral_ai import ViralAI, Config
+
+config = Config()
+bot = ViralAI(config)
+await bot.run()
 ```
-viral_ai/
-├── config.py      # 🔧 Secure configuration management
-├── trends.py      # 🔍 TikTok API trend analysis
-├── content.py     # 🧠 AI content generation
-├── video.py       # 🎬 Professional video production
-├── upload.py      # 📱 Multi-platform uploading
-└── main.py        # 🚀 Main orchestrator
+
+### **Project Structure**
 ```
-Enterprise-grade with modular components.
+viral-ai-tiktok/
+├── viral_ai/              # 🧠 Core AI system
+│   ├── config.py          # 🔧 Configuration management
+│   ├── trends.py          # 🔍 TikTok API trend analysis
+│   ├── content.py         # 🧠 AI content generation
+│   ├── video.py           # 🎬 Video production
+│   ├── upload.py          # 📱 Multi-platform uploading
+│   └── main.py            # 🚀 Main orchestrator
+├── assets/                # 🎨 Video assets
+├── config.yaml           # ⚙️ System configuration
+├── .env.example          # 📋 Configuration template
+├── requirements.txt      # 📦 Dependencies
+└── run_bot.py           # 🚀 Simple launcher
+```
+
+---
 
 ## 🚀 Features
 
@@ -151,6 +202,8 @@ Enterprise-grade with modular components.
 - **Prometheus Metrics** - Production monitoring
 - **Structured Logging** - JSON logs for ELK stack
 
+---
+
 ## 📊 Performance Dashboard
 
 Monitor your viral success with built-in analytics:
@@ -160,6 +213,10 @@ Monitor your viral success with built-in analytics:
 - **📱 Platform Analytics** - Performance across platforms
 - **⏰ Optimal Timing** - Best posting times
 - **🔄 Learning Progress** - Continuous improvement metrics
+
+Access your dashboard at: `http://localhost:8000/metrics`
+
+---
 
 ## 🛠️ Development
 
@@ -171,8 +228,8 @@ Monitor your viral success with built-in analytics:
 ### **Installation**
 ```bash
 # Clone repository
-git clone https://github.com/Jabsama/BOTTIKTOK.git
-cd BOTTIKTOK
+git clone https://github.com/yourusername/viral-ai-tiktok.git
+cd viral-ai-tiktok
 
 # Install dependencies
 pip install -r requirements.txt
@@ -198,11 +255,13 @@ ruff check .
 black .
 ```
 
+---
+
 ## 🔐 Security & Compliance
 
 ### **Data Protection**
 - **Local Storage Only** - No data sent to third parties
-- **Secure Secrets** - AWS Secrets Manager + Docker Secrets support
+- **Secure Secrets** - Environment variables + .gitignore protection
 - **90-Day Retention** - Automatic data cleanup
 - **Privacy First** - GDPR compliant design
 
@@ -212,18 +271,36 @@ black .
 - **Content Labeling** - Automatic AIGC and sponsored content labels
 - **Conservative Posting** - Safe limits to avoid shadow-banning
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### **Asset Licensing**
-- **Code**: MIT License
-- **Assets**: CC0 (Public Domain) - see [LICENSE-ASSETS](LICENSE-ASSETS)
-- **LUTs**: Royalty-free color grading
+---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions! Here's how you can help:
+
+### **Ways to Contribute**
+- 🐛 **Bug Reports** - Found an issue? Let us know!
+- 💡 **Feature Requests** - Have an idea? We'd love to hear it!
+- 🎨 **Asset Packs** - Submit viral templates and effects
+- 📖 **Documentation** - Help improve our guides
+- 🧪 **Testing** - Help us test on different platforms
+
+### **Development Setup**
+```bash
+# Fork the repository
+git clone https://github.com/yourusername/viral-ai-tiktok.git
+cd viral-ai-tiktok
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install development dependencies
+pip install -r requirements.txt
+pip install -e .
+
+# Run tests
+pytest
+```
 
 ### **Community Packs**
 Submit your own viral templates and assets:
@@ -232,38 +309,61 @@ Submit your own viral templates and assets:
 - Effect templates
 - Viral hooks
 
+---
+
 ## 📞 Support
 
-- **📖 Documentation**: Check this README and code comments
-- **🐛 Bug Reports**: Use GitHub Issues
-- **💡 Feature Requests**: Use GitHub Issues
-- **💬 Community**: GitHub Discussions
+- **📖 Documentation** - Check this README and code comments
+- **🐛 Bug Reports** - Use GitHub Issues
+- **💡 Feature Requests** - Use GitHub Issues
+- **💬 Community** - GitHub Discussions
+
+---
 
 ## ⚠️ Disclaimer
 
-- **AI Generated Content**: All content is clearly labeled as AI-generated
-- **No Income Guarantee**: Results may vary, no income promises
-- **Educational Purpose**: For learning and experimentation
-- **Compliance**: Users responsible for following platform terms
+- **AI Generated Content** - All content is clearly labeled as AI-generated
+- **No Income Guarantee** - Results may vary, no income promises made
+- **Educational Purpose** - For learning and experimentation
+- **Compliance** - Users responsible for following platform terms
+- **Rate Limits** - Respect all platform API limits and guidelines
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### **What this means:**
+- ✅ **Commercial use** - Use it for your business
+- ✅ **Modification** - Customize it for your needs
+- ✅ **Distribution** - Share it with others
+- ✅ **Private use** - Use it personally
+- ❗ **No warranty** - Use at your own risk
+
+---
 
 ## 🎉 Success Stories
 
-*"Went from 0 to 100K followers in 3 months using this bot!"* - Anonymous User
+> *"Went from 0 to 100K followers in 3 months using this bot!"*  
+> — Anonymous User
 
-*"The AI content generation is incredible - it knows exactly what goes viral!"* - Content Creator
+> *"The AI content generation is incredible - it knows exactly what goes viral!"*  
+> — Content Creator
 
-*"Finally, a TikTok bot that actually follows the rules!"* - Digital Marketer
+> *"Finally, a TikTok bot that actually follows the rules!"*  
+> — Digital Marketer
 
 ---
 
 ## 🚀 Ready to Go Viral?
 
 ```bash
-git clone https://github.com/Jabsama/BOTTIKTOK.git
-cd BOTTIKTOK
+git clone https://github.com/yourusername/viral-ai-tiktok.git
+cd viral-ai-tiktok
 cp .env.example .env
-# Add your TikTok credentials
-python project/ULTIMATE_VIRAL_AI.py
+# Add your TikTok credentials to .env
+python run_bot.py
 ```
 
 **Start your viral empire today! 🔥**
@@ -274,6 +374,8 @@ python project/ULTIMATE_VIRAL_AI.py
 
 **⭐ Star this repo if it helped you go viral! ⭐**
 
-[🚀 Get Started](https://github.com/Jabsama/BOTTIKTOK) • [📖 Docs](README.md) • [🐛 Issues](https://github.com/Jabsama/BOTTIKTOK/issues) • [💬 Discussions](https://github.com/Jabsama/BOTTIKTOK/discussions)
+[🚀 Get Started](#-quick-start-3-steps) • [📖 Docs](#-configuration-guide) • [🐛 Issues](https://github.com/yourusername/viral-ai-tiktok/issues) • [💬 Discussions](https://github.com/yourusername/viral-ai-tiktok/discussions)
+
+**Made with ❤️ by the Viral AI Community**
 
 </div>

@@ -1,0 +1,68 @@
+# 🚀 VIRAL AI - Dependencies
+# Core dependencies for TikTok automation
+
+# Web requests and APIs
+requests>=2.31.0
+aiohttp>=3.8.0
+python-dotenv>=1.0.0
+
+# Video processing
+moviepy>=1.0.3
+ffmpeg-python>=0.2.0
+Pillow>=10.0.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Database
+sqlalchemy>=2.0.0
+aiosqlite>=0.19.0
+
+# Redis (optional)
+redis>=4.5.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+mabwiser>=2.7.0
+
+# Async support
+asyncio-mqtt>=0.13.0
+tenacity>=8.2.0
+
+# Monitoring
+prometheus-client>=0.17.0
+
+# Development
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+black>=23.7.0
+ruff>=0.0.280
+
+# Security
+cryptography>=41.0.0
+pyjwt>=2.8.0
+
+# YAML support
+pyyaml>=6.0
+
+# HTTP server for OAuth
+bottle>=0.12.25
+
+# Image processing
+opencv-python>=4.8.0
+
+# Audio processing (optional)
+pydub>=0.25.1
+
+# Social media APIs
+google-auth>=2.22.0
+google-auth-oauthlib>=1.0.0
+google-auth-httplib2>=0.1.0
+google-api-python-client>=2.97.0
+
+# Utilities
+click>=8.1.0
+rich>=13.5.0
+tqdm>=4.66.0

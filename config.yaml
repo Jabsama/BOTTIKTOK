@@ -1,0 +1,162 @@
+# 🚀 Viral AI - Configuration YAML
+# Configuration principale du système
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 🎨 BRAND CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════════════════
+brand:
+  name: "Viral AI"
+  primary_color: "#00BFA6"
+  secondary_color: "#FFD54F"
+  logo_path: "assets/logo.png"
+  promo_code: "GPU5"
+  affiliate_url: "https://your-gpu-rental-site.com/?ref=GPU5"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 🎬 VIDEO CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════════════════
+video:
+  # Dimensions (TikTok vertical format)
+  width: 1080
+  height: 1920
+  fps: 30
+  
+  # Duration
+  duration_min: 8
+  duration_max: 12
+  
+  # Quality
+  bitrate: "2M"
+  codec: "libx264"
+  
+  # Paths
+  assets_bg_dir: "assets/bg"
+  assets_overlay_dir: "assets/overlays"
+  output_dir: "output"
+  temp_dir: "temp"
+  
+  # Templates
+  templates:
+    - name: "POWER_ENERGY"
+      description: "Lightning effects, particle bursts, dynamic zoom"
+      effects: ["lightning", "particles", "zoom"]
+    - name: "TECH_SPEED"
+      description: "Digital glitch, motion blur, speed lines"
+      effects: ["glitch", "motion_blur", "speed_lines"]
+    - name: "MONEY_ACTION"
+      description: "Coin drops, price slashes, compelling CTAs"
+      effects: ["coins", "price_slash", "cta"]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 📱 POSTING CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════════════════
+posting:
+  # TikTok compliance
+  max_posts_per_day: 2
+  min_spacing_minutes: 120
+  
+  # Platforms
+  platforms:
+    tiktok:
+      enabled: true
+      priority: 1
+    youtube:
+      enabled: true
+      priority: 2
+    instagram:
+      enabled: false
+      priority: 3
+  
+  # Hashtags
+  max_hashtags: 30
+  required_hashtags: ["#AIGC", "#ad", "#sponsored"]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 🔒 DISCLAIMERS & COMPLIANCE
+# ═══════════════════════════════════════════════════════════════════════════════
+disclaimers:
+  aigc_label: "AI Generated Content"
+  results_warning: "⚠️ Results may vary"
+  no_income_guarantee: "No income guarantee - educational purpose only"
+  sponsored_content: "Sponsored content - affiliate links included"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 🧠 AI CONTENT GENERATION
+# ═══════════════════════════════════════════════════════════════════════════════
+content:
+  # Viral strategies
+  strategies:
+    - name: "trend_hijacking"
+      weight: 0.2
+      description: "Leverage trending hashtags and topics"
+    - name: "curiosity_gaps"
+      weight: 0.15
+      description: "Create compelling hooks that demand attention"
+    - name: "emotional_triggers"
+      weight: 0.15
+      description: "Use psychology to drive engagement"
+    - name: "social_proof"
+      weight: 0.1
+      description: "Leverage testimonials and success stories"
+    - name: "urgency_scarcity"
+      weight: 0.1
+      description: "Create time-sensitive offers"
+    - name: "educational_hooks"
+      weight: 0.15
+      description: "Provide valuable information"
+    - name: "mild_controversy"
+      weight: 0.15
+      description: "Spark debate and discussion"
+  
+  # Text generation
+  max_words_per_hook: 4
+  hook_templates:
+    - "This {adjective} {noun} will {verb} your {target}"
+    - "{number} {experts} reveal {secret}"
+    - "Why {authority} {action} {object}"
+    - "{timeframe} to {achievement}"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 📊 ANALYTICS & MONITORING
+# ═══════════════════════════════════════════════════════════════════════════════
+analytics:
+  # Metrics collection
+  track_views: true
+  track_engagement: true
+  track_conversions: true
+  
+  # Reporting
+  daily_reports: true
+  weekly_summaries: true
+  
+  # Thresholds
+  viral_threshold_views: 10000
+  engagement_rate_target: 0.05
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# ⚙️ SYSTEM CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════════════════
+system:
+  # Timing
+  cycle_interval_minutes: 30
+  trend_refresh_minutes: 15
+  
+  # Performance
+  max_concurrent_uploads: 3
+  video_processing_timeout: 300
+  
+  # Storage
+  cleanup_old_videos_days: 7
+  max_storage_gb: 10
+  
+  # Retry logic
+  max_retries: 3
+  retry_delay_seconds: 5
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 🌍 INTERNATIONALIZATION
+# ═══════════════════════════════════════════════════════════════════════════════
+i18n:
+  default_language: "en"
+  supported_languages: ["en", "es", "fr", "de", "zh"]
+  auto_detect_language: true
